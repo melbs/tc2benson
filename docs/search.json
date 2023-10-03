@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "API Controls page",
+    "section": "",
+    "text": "Sessions"
+  },
+  {
+    "objectID": "about.html#hi",
+    "href": "about.html#hi",
+    "title": "API Controls page",
+    "section": "hi",
+    "text": "hi\nAPI controls page\nyo yoyo page"
+  },
+  {
+    "objectID": "about.html#heading-4",
+    "href": "about.html#heading-4",
+    "title": "API Controls page",
+    "section": "heading 4",
+    "text": "heading 4"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Single Source, Many Outputs",
+    "section": "",
+    "text": "This is a demo site."
+  },
+  {
+    "objectID": "index.html#description",
+    "href": "index.html#description",
+    "title": "Single Source, Many Outputs",
+    "section": "",
+    "text": "This is a demo site."
+  },
+  {
+    "objectID": "index.html#heading-2",
+    "href": "index.html#heading-2",
+    "title": "Single Source, Many Outputs",
+    "section": "heading 2",
+    "text": "heading 2\nThis is a demo site.\n\nOUs\nUsers\nServices\n\nCore\nAdditional"
+  },
+  {
+    "objectID": "index.html#heading-3",
+    "href": "index.html#heading-3",
+    "title": "Single Source, Many Outputs",
+    "section": "heading 3",
+    "text": "heading 3\nAnother sentence"
+  }
+]
