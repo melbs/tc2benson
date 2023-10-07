@@ -1,7 +1,0 @@
----
-title: "API Controls page"
----
-
-API controls page
-
-yo yoyo page

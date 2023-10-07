@@ -1,0 +1,19 @@
+---
+title: "Outputs"
+---
+
+Here are some outputs!
+
+## Outputs
+
+### Marketing
+
+{{< include source_topics/_marketing.qmd >}}
+
+
+### Audit
+
+{{< include source_topics/audit.qmd >}}
+
+
+### Academy
