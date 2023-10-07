@@ -2,15 +2,13 @@
 title: "Outputs"
 ---
 
-## Audit
+## Academy
 
 ### Audience
 
-* Consultants
-* Audit team
+* Technical PD
 
 ### Format
 
 Google Doc
-PDF
-
+Google Slides

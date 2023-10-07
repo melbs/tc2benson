@@ -2,18 +2,14 @@
 title: "Outputs"
 ---
 
-Here are some outputs!
+## Purpose
 
-## Outputs
+The purpose of this page is to provide users with different types of API Control content outputs, depending on their needs.
 
-### Marketing
+## Types of users
 
 {{< include source_topics/_marketing.qmd >}}
 
-
-### Audit
-
 {{< include source_topics/audit.qmd >}}
 
-
-### Academy
+{{< include source_topics/academy.qmd >}}

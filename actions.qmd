@@ -1,0 +1,39 @@
+---
+title: "Actions Required"
+---
+
+## Next Steps: 2 Required Action before Oct 23rd
+
+The process boils down to two actions: Configure and Confirm.
+
+[![](images/2actions.png)]{fig-alt="two blocks saying configure and confirm"}
+
+### Configure a trusted list of OAuth apps
+
+This is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:
+
+#### To go towards a Trusted List approach for users
+
+1. Go through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)
+2. Figure out how to handle the incoming app requests.
+3. Look at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)
+  
+#### Ways to “approve” apps
+
+1. You can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]
+2. You could “add an app” and trust.
+3. Recommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]
+
+[![](images/approve.png)]{fig-alt="workflow of approving apps"}
+
+### Creating a trusted list tips
+
+* Check out the September 14th Deep Dive on this
+   * Slide deck - slides
+  * Recording 
+
+### Confirm setting before October 23rd
+
+* This is the [Guided Stepper](https://admin.google.com/u/0/ac/owl/reviewapps/intro?hl=en)
+* Think of this as you signing off with “parental/guardian consent”
+* [YouTube video](https://www.youtube.com/watch?v=jAlmZ_lwr_Q&t=2s) of this process.

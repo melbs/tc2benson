@@ -1,6 +1,16 @@
 ---
-title: " 2"
+title: "Outputs"
 ---
 
-Marketing information
+## Marketing
 
+### Audience
+
+* Pre-Sales
+* Customer Enablement
+* Account Managers
+
+### Format
+
+Powerpoint
+PDF

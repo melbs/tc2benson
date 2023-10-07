@@ -10,6 +10,8 @@ website:
         text: Home
       - href: outputs.qmd
         text: Outputs
+      - href: actions.qmd
+        text: Actions Required
 
 format:
   html:

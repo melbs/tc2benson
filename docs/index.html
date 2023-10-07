@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -91,6 +125,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./outputs.html" rel="" target="">
  <span class="menu-text">Outputs</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./actions.html" rel="" target="">
+ <span class="menu-text">Actions Required</span></a>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -109,8 +147,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
   <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">TL;DR</a></li>
+  </ul></li>
   <li><a href="#understanding-the-latest-updates" id="toc-understanding-the-latest-updates" class="nav-link" data-scroll-target="#understanding-the-latest-updates">Understanding the Latest Updates</a>
   <ul class="collapse">
   <li><a href="#immediate-impact" id="toc-immediate-impact" class="nav-link" data-scroll-target="#immediate-impact">Immediate Impact</a></li>
@@ -120,10 +160,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
   </ul></li>
-  <li><a href="#next-steps-2-required-action-before-oct-23rd" id="toc-next-steps-2-required-action-before-oct-23rd" class="nav-link" data-scroll-target="#next-steps-2-required-action-before-oct-23rd">Next Steps: 2 Required Action before Oct 23rd</a></li>
+  <li><a href="#next-steps-2-required-action-before-oct-23rd" id="toc-next-steps-2-required-action-before-oct-23rd" class="nav-link" data-scroll-target="#next-steps-2-required-action-before-oct-23rd">Next Steps: 2 Required Action before Oct 23rd</a>
+  <ul class="collapse">
   <li><a href="#configure-a-trusted-list-of-oauth-apps" id="toc-configure-a-trusted-list-of-oauth-apps" class="nav-link" data-scroll-target="#configure-a-trusted-list-of-oauth-apps">Configure a trusted list of OAuth apps</a></li>
-  <li><a href="#confirm-setting-before-october-23rd" id="toc-confirm-setting-before-october-23rd" class="nav-link" data-scroll-target="#confirm-setting-before-october-23rd">Confirm setting before October 23rd</a></li>
   <li><a href="#creating-a-trusted-list-tips" id="toc-creating-a-trusted-list-tips" class="nav-link" data-scroll-target="#creating-a-trusted-list-tips">Creating a trusted list tips</a></li>
+  <li><a href="#confirm-setting-before-october-23rd" id="toc-confirm-setting-before-october-23rd" class="nav-link" data-scroll-target="#confirm-setting-before-october-23rd">Confirm setting before October 23rd</a></li>
+  </ul></li>
   <li><a href="#faq" id="toc-faq" class="nav-link" data-scroll-target="#faq">FAQ</a></li>
   <li><a href="#pro-tips" id="toc-pro-tips" class="nav-link" data-scroll-target="#pro-tips">Pro Tips</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
@@ -160,18 +202,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Hey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.</p>
+<p>Hey there, Google Admins! We’re on the cusp of significant shifts in <strong>Google’s API control settings for users under 18</strong>, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.</p>
 <p>With the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.</p>
-</section>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<section id="tldr" class="level3">
+<h3 class="anchored" data-anchor-id="tldr">TL;DR</h3>
 <p>Google is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then.</p>
-<p>image</p>
+<p><span data-fig-alt="Getting started banner screenshot"><img src="images/api-gettingstarted.png" class="img-fluid"></span></p>
+</section>
 </section>
 <section id="understanding-the-latest-updates" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-latest-updates">Understanding the Latest Updates</h2>
 <p>Google notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct.&nbsp;23rd, 2023.</p>
-<p>Takeaway: Google is making domains go to an OAuth App “Trusted List” for under 18 before Oct.&nbsp;23rd, 2023 or students will lose access to OAuth apps. Read the full email here.</p>
+<p>Takeaway: Google is making domains go to an OAuth App “Trusted List” for under 18 before Oct.&nbsp;23rd, 2023 or students will lose access to OAuth apps. Read the <a href="https://collab.amplifiedit.com/topic/2881-%F0%9F%9A%A8-primary-admin-email-action-required-access-to-third-party-applications-is-changing-for-users-designated-as-under-18-%F0%9F%9A%A8-61923">full email</a></p>
 <section id="immediate-impact" class="level3">
 <h3 class="anchored" data-anchor-id="immediate-impact">Immediate Impact</h3>
 <ul>
@@ -184,8 +226,11 @@ ul.task-list li input[type="checkbox"] {
 <li>This is why you’re seeing requests (from students)</li>
 </ul></li>
 </ul>
-<p>image</p>
-<p>It’s like Google did the “Stop the bleed” approach for students for you.</p>
+<p><span data-fig-alt="google's email"><img src="images/stopthe.png" class="img-fluid"></span></p>
+<blockquote class="blockquote">
+<p>“It’s like Google did the “Stop the bleed” approach for students for you.”</p>
+<p><em>- Melissa Benson</em></p>
+</blockquote>
 </section>
 </section>
 <section id="api-controls-overview-and-best-practices" class="level2">
@@ -193,51 +238,42 @@ ul.task-list li input[type="checkbox"] {
 <section id="overview" class="level3">
 <h3 class="anchored" data-anchor-id="overview">Overview</h3>
 <p>When users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data. Support Page</p>
-<p>API Controls Section: Security &gt; Access and data controls &gt; API Controls</p>
-<p>Image here</p>
-<p>Manage Third Party Apps: Security &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps</p>
-<p>Image here</p>
+<p><strong>API Controls Section:</strong> Security &gt; Access and data controls &gt; API Controls</p>
+<p><strong>Manage Third Party Apps:</strong> Security &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps</p>
 </section>
 <section id="best-practices" class="level3">
 <h3 class="anchored" data-anchor-id="best-practices">Best Practices</h3>
-<p>Students: (Default) Don’t allow users to access any third-party apps</p>
-<p>image</p>
-<p>Staff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process.</p>
-<p>image</p>
+<p><strong>Students:</strong> (Default) Don’t allow users to access any third-party apps</p>
+<p><strong>Staff:</strong> This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process.</p>
 </section>
 </section>
 <section id="next-steps-2-required-action-before-oct-23rd" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps-2-required-action-before-oct-23rd">Next Steps: 2 Required Action before Oct 23rd</h2>
 <p>The process boils down to two actions: Configure and Confirm.</p>
-<p>image image</p>
-</section>
-<section id="configure-a-trusted-list-of-oauth-apps" class="level2">
-<h2 class="anchored" data-anchor-id="configure-a-trusted-list-of-oauth-apps">Configure a trusted list of OAuth apps</h2>
+<p><span data-fig-alt="two blocks saying configure and confirm"><img src="images/2actions.png" class="img-fluid"></span></p>
+<section id="configure-a-trusted-list-of-oauth-apps" class="level3">
+<h3 class="anchored" data-anchor-id="configure-a-trusted-list-of-oauth-apps">Configure a trusted list of OAuth apps</h3>
 <p>This is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:</p>
-<ul>
-<li>To go towards a Trusted List approach for users
-<ul>
+<section id="to-go-towards-a-trusted-list-approach-for-users" class="level4">
+<h4 class="anchored" data-anchor-id="to-go-towards-a-trusted-list-approach-for-users">To go towards a Trusted List approach for users</h4>
+<ol type="1">
 <li>Go through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)</li>
 <li>Figure out how to handle the incoming app requests.</li>
 <li>Look at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)</li>
-</ul></li>
-<li>Ways to “approve” apps
-<ul>
+</ol>
+</section>
+<section id="ways-to-approve-apps" class="level4">
+<h4 class="anchored" data-anchor-id="ways-to-approve-apps">Ways to “approve” apps</h4>
+<ol type="1">
 <li>You can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]</li>
 <li>You could “add an app” and trust.</li>
 <li>Recommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]</li>
-</ul></li>
-</ul>
-<p>image</p>
-<p>image</p>
+</ol>
+<p><span data-fig-alt="workflow of approving apps"><img src="images/approve.png" class="img-fluid"></span></p>
 </section>
-<section id="confirm-setting-before-october-23rd" class="level2">
-<h2 class="anchored" data-anchor-id="confirm-setting-before-october-23rd">Confirm setting before October 23rd</h2>
-<p>This is the Guided Stepper Think of this as you signing off with “parental/guardian consent” YouTube video of this process.</p>
-<p>image</p>
 </section>
-<section id="creating-a-trusted-list-tips" class="level2">
-<h2 class="anchored" data-anchor-id="creating-a-trusted-list-tips">Creating a trusted list tips</h2>
+<section id="creating-a-trusted-list-tips" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-trusted-list-tips">Creating a trusted list tips</h3>
 <ul>
 <li>Check out the September 14th Deep Dive on this
 <ul>
@@ -245,6 +281,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Recording</li>
 </ul></li>
 </ul>
+</section>
+<section id="confirm-setting-before-october-23rd" class="level3">
+<h3 class="anchored" data-anchor-id="confirm-setting-before-october-23rd">Confirm setting before October 23rd</h3>
+<ul>
+<li>This is the <a href="https://admin.google.com/u/0/ac/owl/reviewapps/intro?hl=en">Guided Stepper</a></li>
+<li>Think of this as you signing off with “parental/guardian consent”</li>
+<li><a href="https://www.youtube.com/watch?v=jAlmZ_lwr_Q&amp;t=2s">YouTube video</a> of this process.</li>
+</ul>
+</section>
 </section>
 <section id="faq" class="level2">
 <h2 class="anchored" data-anchor-id="faq">FAQ</h2>
@@ -294,27 +339,35 @@ ul.task-list li input[type="checkbox"] {
 <section id="pro-tips" class="level2">
 <h2 class="anchored" data-anchor-id="pro-tips">Pro Tips</h2>
 <ul>
-<li><p>Apps Script function getToken() {<br>
-var accessToken = ScriptApp.getOAuthToken(); var url = “https://www.googleapis.com/oauth2/v3/tokeninfo”; var params = { method: “post”, headers: {“Authorization”: “Bearer” + accessToken} }; var res = UrlFetchApp.fetch(url, params).getContentText(); var clientId = JSON.parse(res).azp; Logger.log(clientId) }</p></li>
-<li><p>When bulk uploading API changes, Google will email the initiator of that change when they are done. Note: it could take hours to complete. One school even had it take a week.</p>
+<li>Apps Script</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getToken</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>{  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> accessToken <span class="op">=</span> ScriptApp<span class="op">.</span><span class="fu">getOAuthToken</span>()<span class="op">;</span>  <span class="kw">var</span> url <span class="op">=</span> <span class="st">"https://www.googleapis.com/oauth2/v3/tokeninfo"</span><span class="op">;</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> params <span class="op">=</span> { <span class="dt">method</span><span class="op">:</span> <span class="st">"post"</span><span class="op">,</span> <span class="dt">headers</span><span class="op">:</span> {<span class="st">"Authorization"</span><span class="op">:</span> <span class="st">"Bearer "</span> <span class="op">+</span> accessToken} }<span class="op">;</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> res <span class="op">=</span> UrlFetchApp<span class="op">.</span><span class="fu">fetch</span>(url<span class="op">,</span> params)<span class="op">.</span><span class="fu">getContentText</span>()<span class="op">;</span>  <span class="kw">var</span> clientId <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(res)<span class="op">.</span><span class="at">azp</span><span class="op">;</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Logger<span class="op">.</span><span class="fu">log</span>(clientId)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>When bulk uploading API changes, Google will email the initiator of that change when they are done. Note: it could take hours to complete. One school even had it take a week.
 <ul>
 <li>From: The Google Workspace Team <a href="mailto:workspace-noreply@google.com" class="email">workspace-noreply@google.com</a></li>
 <li>Subject: Google Admin Alert: Bulk upload report for yourdomain.org</li>
 </ul></li>
-<li><p>Display a custom message for the blocked app message.</p>
+<li>Display a custom message for the blocked app message.
 <ul>
 <li>You cannot hyperlink but many schools use a short URL. Security &gt; Access and data control&gt; API Controls &gt; Settings &gt; Custom user message</li>
 </ul></li>
-<li><p>Check “trust internal apps”. This will avoid issues with accidentally blocking App Script users.</p>
+<li>Check “trust internal apps”. This will avoid issues with accidentally blocking App Script users.
 <ul>
 <li>WARNING! By allowing this, it could be security risk</li>
 <li>Security &gt; Access and data control&gt; API Controls &gt; Settings &gt; Internal Apps</li>
 </ul></li>
-<li><p>Google API - Users can view and remove their own Google API connections</p>
+<li>Google API - Users can view and remove their own Google API connections
 <ul>
 <li>A great post on how end users can go into their account and see / manage connections.</li>
 </ul></li>
-<li><p>When you add an API and choose the root to trust or block, it won’t automatically filter down to any sub org you individually configured and disinherit it from the root.</p>
+<li>When you add an API and choose the root to trust or block, it won’t automatically filter down to any sub org you individually configured and disinherit it from the root.
 <ul>
 <li>Directions in this Collab post</li>
 </ul></li>
@@ -322,16 +375,27 @@ var accessToken = ScriptApp.getOAuthToken(); var url = “https://www.googleapis
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>CDW Amplified Help Article: Manage access to unconfigured third-party apps Google Support Page: Manage access to unconfigured third-party apps for users designated as under 18 Google Support Page: Control which third-party &amp; internal apps access Google Workspace data Official Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests</p>
+<ul>
+<li>CDW Amplified Help Article: Manage access to unconfigured third-party apps</li>
+<li>Google Support Page: Manage access to unconfigured third-party apps for users designated as under 18</li>
+<li>Google Support Page: Control which third-party &amp; internal apps access Google Workspace data</li>
+<li>Official Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests</li>
+</ul>
 <section id="collaborative-member-resources" class="level3">
 <h3 class="anchored" data-anchor-id="collaborative-member-resources">Collaborative Member Resources</h3>
-<p>September 14th Deep Dive Collaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes Slide Deck | Timestamps &amp; Summary | Recording</p>
-<p>Q &amp; A from the live stream</p>
+<section id="september-14th-deep-dive" class="level4">
+<h4 class="anchored" data-anchor-id="september-14th-deep-dive">September 14th Deep Dive</h4>
+<ul>
+<li>Collaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes</li>
+<li>Slide Deck | Timestamps &amp; Summary | Recording</li>
+<li>Q &amp; A from the live stream</li>
+</ul>
+</section>
 </section>
 </section>
 <section id="visual-roadmap" class="level2">
 <h2 class="anchored" data-anchor-id="visual-roadmap">Visual Roadmap</h2>
-<p>image</p>
+<p>[<img src="images/roadmap.png" class="img-fluid">]{fig-alt=” map of key milestones”}</p>
 
 
 </section>
