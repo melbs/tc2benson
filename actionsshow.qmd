@@ -40,6 +40,6 @@ format:
 
 ---
 
-## Exit
+# Exit
 
 Return back to the [main page](https://melbs.github.io/tc2benson/)

@@ -9,7 +9,6 @@ Hey there, Google Admins! We're on the cusp of significant shifts in **Google's 
 
   With the flurry of updates to the API Controls section in the admin console over the past couple of years, it's time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.
 
-
 ### TL;DR
 
 Google is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then.

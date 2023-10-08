@@ -18,6 +18,7 @@ Google is making domains go to an OAuth App “Trusted List” for under 18 befo
 
 Previously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.
 
+
 :::{.callout-note}
 This is why you are seeing a lot more “configured apps”
 :::
