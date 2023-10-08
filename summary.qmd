@@ -1,0 +1,18 @@
+---
+title: "API Controls"
+---
+
+## Summary
+
+<div class="reveal resize-content">
+Hey there, Google Admins! We're on the cusp of significant shifts in **Google's API control settings for users under 18**, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven't yet fine-tuned their API Control settings. And for those who think they're one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.
+
+  With the flurry of updates to the API Controls section in the admin console over the past couple of years, it's time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.
+
+
+### TL;DR
+
+Google is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then.
+
+[![](images/api-gettingstarted.png)]{fig-alt="Getting started banner screenshot"}
+</div>

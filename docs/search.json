@@ -1,164 +1,185 @@
 [
   {
-    "objectID": "actions.html",
-    "href": "actions.html",
-    "title": "Actions Required",
+    "objectID": "together.html#summary",
+    "href": "together.html#summary",
+    "title": "API Controls",
+    "section": "Summary",
+    "text": "Summary\n\nHey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\n\nTL;DR\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
+  },
+  {
+    "objectID": "together.html#understanding-the-updates",
+    "href": "together.html#understanding-the-updates",
+    "title": "API Controls",
+    "section": "Understanding the Updates",
+    "text": "Understanding the Updates\nGoogle notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.\n\n\n\n\n\n\nTakeaway\n\n\n\nGoogle is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the full email\n\n\n\nImmediate Impact\nPreviously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you are seeing a lot more “configured apps”\n\n\nAny “new” app can not be accessed by under 18 and the user can “Request” the app.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you’re seeing requests (from students)\n\n\n\n\n“It’s like Google did the “Stop the bleed” approach for students for you.”\n- Melissa Benson"
+  },
+  {
+    "objectID": "together.html#api-controls",
+    "href": "together.html#api-controls",
+    "title": "API Controls",
+    "section": "API Controls",
+    "text": "API Controls\n\nOverview\nWhen users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data.\nAPI Controls Section:\nSecurity &gt; Access and data controls &gt; API Controls\nManage Third Party Apps:\nSecurity &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps\n\n\nBest Practices\nStudents: (Default) Don’t allow users to access any third-party apps\nStaff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process."
+  },
+  {
+    "objectID": "together.html#required-actions",
+    "href": "together.html#required-actions",
+    "title": "API Controls",
+    "section": "Required Actions",
+    "text": "Required Actions\nThe process boils down to two actions: Configure and Confirm.\n\n\nConfigure\n\n\n\n\n\n\nImportant\n\n\n\nConfigure a trusted list of OAuth apps: This is a significant task as most schools see hundreds and thousands of accessed apps.\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\nWays to “approve” apps\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\n\nTip\n\n\n\nWatch the September Deep Dive for tips\n\n\n\n\nConfirm\n\n\n\n\n\n\nImportant\n\n\n\nConfirm setting before October 23rd\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
+  },
+  {
+    "objectID": "together.html#faq",
+    "href": "together.html#faq",
+    "title": "API Controls",
+    "section": "FAQ",
+    "text": "FAQ\n\nIs there a maximum of configured apps?\n\nYes, 15,000. We are in talks with Google about this\n\nCan I unconfigure an app?\n\nIt does not appear like you can truly “unconfigure” an app. We are talking to Google about this.\n\nI’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs\n\nThis is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.\n\nCan we disable the ability for students to “Request apps”?\n\nNo. But it is something we will talk about internally to see if there is a work around.\nWe asked Google and it’s “in the works”.\n\nCan staff request apps like students?\n\nNo. Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)\n\nWhere does that “request” go (when students request access to an app)?\n\nAdmin Console Dashboard &gt; App access control card\nSecurity &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.\n\nCan we see “who” requested the app? Can we get alerted?\n\nUnder Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.\nYes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.\n\nCan you explain the API Block-Exempt option when trusting an app?\n\nThis is for people with Standard or Plus and use Context Aware Access.\nSelected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image\n\nQ & As from the after party\n\nSlide 1, Slide 2, Slide 3"
+  },
+  {
+    "objectID": "together.html#resources",
+    "href": "together.html#resources",
+    "title": "API Controls",
+    "section": "Resources",
+    "text": "Resources\nPublic Resources\n\nCDW Amplified Help Article: Manage access to unconfigured third-party apps\nGoogle Support Page: Manage access to unconfigured third-party apps for users designated as under 18\nGoogle Support Page: Control which third-party & internal apps access Google Workspace data\nOfficial Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests\n\n\nCollaborative Member Resources\nSeptember 14th Deep Dive\n\nCollaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes\nSlide Deck | Timestamps & Summary | Recording\nQ & A from the live stream"
+  },
+  {
+    "objectID": "understanding.html",
+    "href": "understanding.html",
+    "title": "API Controls",
     "section": "",
-    "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\nThis is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\n\n\n\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\nCheck out the September 14th Deep Dive on this\n\nSlide deck - slides\nRecording\n\n\n\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
+    "text": "Google notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.\n\n\n\n\n\n\nTakeaway\n\n\n\nGoogle is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the full email\n\n\n\n\nPreviously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you are seeing a lot more “configured apps”\n\n\nAny “new” app can not be accessed by under 18 and the user can “Request” the app.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you’re seeing requests (from students)\n\n\n\n\n“It’s like Google did the “Stop the bleed” approach for students for you.”\n- Melissa Benson"
   },
   {
-    "objectID": "actions.html#next-steps-2-required-action-before-oct-23rd",
-    "href": "actions.html#next-steps-2-required-action-before-oct-23rd",
-    "title": "Actions Required",
+    "objectID": "understanding.html#understanding-the-updates",
+    "href": "understanding.html#understanding-the-updates",
+    "title": "API Controls",
     "section": "",
-    "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\nThis is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\n\n\n\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\nCheck out the September 14th Deep Dive on this\n\nSlide deck - slides\nRecording\n\n\n\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
+    "text": "Google notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.\n\n\n\n\n\n\nTakeaway\n\n\n\nGoogle is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the full email\n\n\n\n\nPreviously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you are seeing a lot more “configured apps”\n\n\nAny “new” app can not be accessed by under 18 and the user can “Request” the app.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you’re seeing requests (from students)\n\n\n\n\n“It’s like Google did the “Stop the bleed” approach for students for you.”\n- Melissa Benson"
   },
   {
-    "objectID": "source_topics/Academy.html",
-    "href": "source_topics/Academy.html",
-    "title": "Outputs",
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "API Controls",
     "section": "",
-    "text": "Technical PD\n\n\n\n\nGoogle Doc Google Slides"
+    "text": "Hey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\n\n\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
   },
   {
-    "objectID": "source_topics/Academy.html#academy",
-    "href": "source_topics/Academy.html#academy",
-    "title": "Outputs",
+    "objectID": "summary.html#summary",
+    "href": "summary.html#summary",
+    "title": "API Controls",
     "section": "",
-    "text": "Technical PD\n\n\n\n\nGoogle Doc Google Slides"
+    "text": "Hey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\n\n\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
   },
   {
-    "objectID": "outputs.html",
-    "href": "outputs.html",
-    "title": "Outputs",
+    "objectID": "apicontrols.html",
+    "href": "apicontrols.html",
+    "title": "API Controls",
     "section": "",
-    "text": "The purpose of this page is to provide users with different types of API Control content outputs, depending on their needs."
+    "text": "When users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data.\nAPI Controls Section:\nSecurity &gt; Access and data controls &gt; API Controls\nManage Third Party Apps:\nSecurity &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps\n\n\n\nStudents: (Default) Don’t allow users to access any third-party apps\nStaff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process."
   },
   {
-    "objectID": "outputs.html#purpose",
-    "href": "outputs.html#purpose",
-    "title": "Outputs",
+    "objectID": "apicontrols.html#api-controls",
+    "href": "apicontrols.html#api-controls",
+    "title": "API Controls",
     "section": "",
-    "text": "The purpose of this page is to provide users with different types of API Control content outputs, depending on their needs."
+    "text": "When users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data.\nAPI Controls Section:\nSecurity &gt; Access and data controls &gt; API Controls\nManage Third Party Apps:\nSecurity &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps\n\n\n\nStudents: (Default) Don’t allow users to access any third-party apps\nStaff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process."
   },
   {
-    "objectID": "outputs.html#types-of-users",
-    "href": "outputs.html#types-of-users",
-    "title": "Outputs",
-    "section": "Types of users",
-    "text": "Types of users"
+    "objectID": "2actions.html",
+    "href": "2actions.html",
+    "title": "API Controls",
+    "section": "",
+    "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nConfigure a trusted list of OAuth apps: This is a significant task as most schools see hundreds and thousands of accessed apps.\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\nWays to “approve” apps\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\n\nTip\n\n\n\nWatch the September Deep Dive for tips\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nConfirm setting before October 23rd\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   },
   {
-    "objectID": "outputs.html#marketing",
-    "href": "outputs.html#marketing",
-    "title": "Outputs",
-    "section": "Marketing",
-    "text": "Marketing\n\nAudience\n\nPre-Sales\nCustomer Enablement\nAccount Managers\n\n\n\nFormat\nPowerpoint PDF"
+    "objectID": "2actions.html#required-actions",
+    "href": "2actions.html#required-actions",
+    "title": "API Controls",
+    "section": "",
+    "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nConfigure a trusted list of OAuth apps: This is a significant task as most schools see hundreds and thousands of accessed apps.\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\nWays to “approve” apps\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\n\nTip\n\n\n\nWatch the September Deep Dive for tips\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nConfirm setting before October 23rd\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   },
   {
-    "objectID": "outputs.html#audit",
-    "href": "outputs.html#audit",
-    "title": "Outputs",
-    "section": "Audit",
-    "text": "Audit\n\nAudience\n\nConsultants\nAudit team\n\n\n\nFormat\nGoogle Doc PDF"
+    "objectID": "actionsshow.html#summary-1",
+    "href": "actionsshow.html#summary-1",
+    "title": "API Controls",
+    "section": "Summary",
+    "text": "Summary\n\nHey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\nTL;DR\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
   },
   {
-    "objectID": "outputs.html#academy",
-    "href": "outputs.html#academy",
-    "title": "Outputs",
-    "section": "Academy",
-    "text": "Academy\n\nAudience\n\nTechnical PD\n\n\n\nFormat\nGoogle Doc Google Slides"
+    "objectID": "actionsshow.html#understanding-the-updates",
+    "href": "actionsshow.html#understanding-the-updates",
+    "title": "API Controls",
+    "section": "Understanding the Updates",
+    "text": "Understanding the Updates\nGoogle notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.\n\n\n\nTakeaway\n\n\nGoogle is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the full email\n\n\n\nImmediate Impact\nPreviously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.\n\n\n\n\n\n\nNote\n\n\nThis is why you are seeing a lot more “configured apps”\n\n\n\nAny “new” app can not be accessed by under 18 and the user can “Request” the app.\n\n\n\n\n\n\nNote\n\n\nThis is why you’re seeing requests (from students)\n\n\n\n\n\n“It’s like Google did the “Stop the bleed” approach for students for you.”\n- Melissa Benson"
   },
   {
-    "objectID": "actionsshow.html#getting-up",
-    "href": "actionsshow.html#getting-up",
-    "title": "Actions Required",
-    "section": "Getting up",
-    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+    "objectID": "actionsshow.html#api-controls-1",
+    "href": "actionsshow.html#api-controls-1",
+    "title": "API Controls",
+    "section": "API Controls",
+    "text": "API Controls\nOverview\nWhen users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data.\nAPI Controls Section:\nSecurity &gt; Access and data controls &gt; API Controls\nManage Third Party Apps:\nSecurity &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps\nBest Practices\nStudents: (Default) Don’t allow users to access any third-party apps\nStaff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process."
   },
   {
-    "objectID": "actionsshow.html#breakfast",
-    "href": "actionsshow.html#breakfast",
-    "title": "Actions Required",
-    "section": "Breakfast",
-    "text": "Breakfast\n\nEat eggs\nDrink coffee"
+    "objectID": "actionsshow.html#required-actions-1",
+    "href": "actionsshow.html#required-actions-1",
+    "title": "API Controls",
+    "section": "Required Actions",
+    "text": "Required Actions\nThe process boils down to two actions: Configure and Confirm.\n\nConfigure\n\n\n\n\n\n\nImportant\n\n\nConfigure a trusted list of OAuth apps: This is a significant task as most schools see hundreds and thousands of accessed apps.\n\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\nWays to “approve” apps\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\n\nTip\n\n\nWatch the September Deep Dive for tips\n\n\n\nConfirm\n\n\n\n\n\n\nImportant\n\n\nConfirm setting before October 23rd\n\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   },
   {
-    "objectID": "actionsshow.html#dinner",
-    "href": "actionsshow.html#dinner",
-    "title": "Actions Required",
-    "section": "Dinner",
-    "text": "Dinner\n\nEat spaghetti\nDrink wine"
+    "objectID": "actionsshow.html#faq-1",
+    "href": "actionsshow.html#faq-1",
+    "title": "API Controls",
+    "section": "FAQ",
+    "text": "FAQ\n\nIs there a maximum of configured apps?\n\nYes, 15,000. We are in talks with Google about this\n\nCan I unconfigure an app?\n\nIt does not appear like you can truly “unconfigure” an app. We are talking to Google about this.\n\nI’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs\n\nThis is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.\n\nCan we disable the ability for students to “Request apps”?\n\nNo. But it is something we will talk about internally to see if there is a work around.\nWe asked Google and it’s “in the works”.\n\nCan staff request apps like students?\n\nNo. Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)\n\nWhere does that “request” go (when students request access to an app)?\n\nAdmin Console Dashboard &gt; App access control card\nSecurity &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.\n\nCan we see “who” requested the app? Can we get alerted?\n\nUnder Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.\nYes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.\n\nCan you explain the API Block-Exempt option when trusting an app?\n\nThis is for people with Standard or Plus and use Context Aware Access.\nSelected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image\n\nQ & As from the after party\n\nSlide 1, Slide 2, Slide 3"
   },
   {
-    "objectID": "actionsshow.html#going-to-sleep",
-    "href": "actionsshow.html#going-to-sleep",
-    "title": "Actions Required",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+    "objectID": "actionsshow.html#resources-1",
+    "href": "actionsshow.html#resources-1",
+    "title": "API Controls",
+    "section": "Resources",
+    "text": "Resources\nPublic Resources\n\nCDW Amplified Help Article: Manage access to unconfigured third-party apps\nGoogle Support Page: Manage access to unconfigured third-party apps for users designated as under 18\nGoogle Support Page: Control which third-party & internal apps access Google Workspace data\nOfficial Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests\n\nCollaborative Member Resources\nSeptember 14th Deep Dive\n\nCollaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes\nSlide Deck | Timestamps & Summary | Recording\nQ & A from the live stream"
   },
   {
     "objectID": "actionsshow.html#exit",
     "href": "actionsshow.html#exit",
-    "title": "Actions Required",
+    "title": "API Controls",
     "section": "Exit",
     "text": "Exit\nReturn back to the main page"
-  },
-  {
-    "objectID": "source_topics/audit.html",
-    "href": "source_topics/audit.html",
-    "title": "Outputs",
-    "section": "",
-    "text": "Consultants\nAudit team\n\n\n\n\nGoogle Doc PDF"
-  },
-  {
-    "objectID": "source_topics/audit.html#audit",
-    "href": "source_topics/audit.html#audit",
-    "title": "Outputs",
-    "section": "",
-    "text": "Consultants\nAudit team\n\n\n\n\nGoogle Doc PDF"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "API Controls",
     "section": "",
-    "text": "I’m taking my “one pager” Collaborative Corner about API Controls and migrating it into a single source to allow for multiple types of outputs for multiple types of communication and audiences. The one pager’s initial purpose was an easy and high level view of API Controls but it has turned into a 10 pager, with lots of information and written in various ways (ie blog post, how to, tutorial)"
-  },
-  {
-    "objectID": "index.html#purpose",
-    "href": "index.html#purpose",
-    "title": "API Controls",
-    "section": "",
-    "text": "I’m taking my “one pager” Collaborative Corner about API Controls and migrating it into a single source to allow for multiple types of outputs for multiple types of communication and audiences. The one pager’s initial purpose was an easy and high level view of API Controls but it has turned into a 10 pager, with lots of information and written in various ways (ie blog post, how to, tutorial)"
+    "text": "Hey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\n\n\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
   },
   {
     "objectID": "index.html#summary",
     "href": "index.html#summary",
     "title": "API Controls",
-    "section": "Summary",
-    "text": "Summary\nHey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\n\nTL;DR\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
+    "section": "",
+    "text": "Hey there, Google Admins! We’re on the cusp of significant shifts in Google’s API control settings for users under 18, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.\nWith the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.\n\n\nGoogle is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then."
   },
   {
-    "objectID": "index.html#understanding-the-latest-updates",
-    "href": "index.html#understanding-the-latest-updates",
+    "objectID": "index.html#understanding-the-updates",
+    "href": "index.html#understanding-the-updates",
     "title": "API Controls",
-    "section": "Understanding the Latest Updates",
-    "text": "Understanding the Latest Updates\nGoogle notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.\nTakeaway: Google is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the full email\n\nImmediate Impact\n\nPreviously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.\n\nThis is why you are seeing a lot more “configured apps”\n\nAny “new” app ca not be accessed by under 18 and the user can “Request” the app.\n\nThis is why you’re seeing requests (from students)\n\n\n\n\n“It’s like Google did the “Stop the bleed” approach for students for you.”\n- Melissa Benson"
+    "section": "Understanding the Updates",
+    "text": "Understanding the Updates\nGoogle notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.\n\n\n\n\n\n\nTakeaway\n\n\n\nGoogle is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the full email\n\n\n\nImmediate Impact\nPreviously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you are seeing a lot more “configured apps”\n\n\nAny “new” app can not be accessed by under 18 and the user can “Request” the app.\n\n\n\n\n\n\nNote\n\n\n\nThis is why you’re seeing requests (from students)\n\n\n\n\n“It’s like Google did the “Stop the bleed” approach for students for you.”\n- Melissa Benson"
   },
   {
-    "objectID": "index.html#api-controls-overview-and-best-practices",
-    "href": "index.html#api-controls-overview-and-best-practices",
+    "objectID": "index.html#api-controls",
+    "href": "index.html#api-controls",
     "title": "API Controls",
-    "section": "API Controls: Overview and Best Practices",
-    "text": "API Controls: Overview and Best Practices\n\nOverview\nWhen users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data. Support Page\nAPI Controls Section: Security &gt; Access and data controls &gt; API Controls\nManage Third Party Apps: Security &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps\n\n\nBest Practices\nStudents: (Default) Don’t allow users to access any third-party apps\nStaff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process."
+    "section": "API Controls",
+    "text": "API Controls\n\nOverview\nWhen users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data.\nAPI Controls Section:\nSecurity &gt; Access and data controls &gt; API Controls\nManage Third Party Apps:\nSecurity &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps\n\n\nBest Practices\nStudents: (Default) Don’t allow users to access any third-party apps\nStaff: This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process."
   },
   {
-    "objectID": "index.html#next-steps-2-required-action-before-oct-23rd",
-    "href": "index.html#next-steps-2-required-action-before-oct-23rd",
+    "objectID": "index.html#required-actions",
+    "href": "index.html#required-actions",
     "title": "API Controls",
-    "section": "Next Steps: 2 Required Action before Oct 23rd",
-    "text": "Next Steps: 2 Required Action before Oct 23rd\nThe process boils down to two actions: Configure and Confirm.\n\n\nConfigure a trusted list of OAuth apps\nThis is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:\n\nTo go towards a Trusted List approach for users\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\n\n\nWays to “approve” apps\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\nCreating a trusted list tips\n\nCheck out the September 14th Deep Dive on this\n\nSlide deck - slides\nRecording\n\n\n\n\nConfirm setting before October 23rd\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
+    "section": "Required Actions",
+    "text": "Required Actions\nThe process boils down to two actions: Configure and Confirm.\n\n\nConfigure\n\n\n\n\n\n\nImportant\n\n\n\nConfigure a trusted list of OAuth apps: This is a significant task as most schools see hundreds and thousands of accessed apps.\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\nWays to “approve” apps\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\n\nTip\n\n\n\nWatch the September Deep Dive for tips\n\n\n\n\nConfirm\n\n\n\n\n\n\nImportant\n\n\n\nConfirm setting before October 23rd\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   },
   {
     "objectID": "index.html#faq",
@@ -168,24 +189,38 @@
     "text": "FAQ\n\nIs there a maximum of configured apps?\n\nYes, 15,000. We are in talks with Google about this\n\nCan I unconfigure an app?\n\nIt does not appear like you can truly “unconfigure” an app. We are talking to Google about this.\n\nI’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs\n\nThis is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.\n\nCan we disable the ability for students to “Request apps”?\n\nNo. But it is something we will talk about internally to see if there is a work around.\nWe asked Google and it’s “in the works”.\n\nCan staff request apps like students?\n\nNo. Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)\n\nWhere does that “request” go (when students request access to an app)?\n\nAdmin Console Dashboard &gt; App access control card\nSecurity &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.\n\nCan we see “who” requested the app? Can we get alerted?\n\nUnder Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.\nYes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.\n\nCan you explain the API Block-Exempt option when trusting an app?\n\nThis is for people with Standard or Plus and use Context Aware Access.\nSelected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image\n\nQ & As from the after party\n\nSlide 1, Slide 2, Slide 3"
   },
   {
-    "objectID": "index.html#pro-tips",
-    "href": "index.html#pro-tips",
-    "title": "API Controls",
-    "section": "Pro Tips",
-    "text": "Pro Tips\n\nApps Script\n\nfunction getToken()\n{  \nvar accessToken = ScriptApp.getOAuthToken();  var url = \"https://www.googleapis.com/oauth2/v3/tokeninfo\"; \nvar params = { method: \"post\", headers: {\"Authorization\": \"Bearer \" + accessToken} }; \nvar res = UrlFetchApp.fetch(url, params).getContentText();  var clientId = JSON.parse(res).azp; \nLogger.log(clientId)\n}\n\nWhen bulk uploading API changes, Google will email the initiator of that change when they are done. Note: it could take hours to complete. One school even had it take a week.\n\nFrom: The Google Workspace Team workspace-noreply@google.com\nSubject: Google Admin Alert: Bulk upload report for yourdomain.org\n\nDisplay a custom message for the blocked app message.\n\nYou cannot hyperlink but many schools use a short URL. Security &gt; Access and data control&gt; API Controls &gt; Settings &gt; Custom user message\n\nCheck “trust internal apps”. This will avoid issues with accidentally blocking App Script users.\n\nWARNING! By allowing this, it could be security risk\nSecurity &gt; Access and data control&gt; API Controls &gt; Settings &gt; Internal Apps\n\nGoogle API - Users can view and remove their own Google API connections\n\nA great post on how end users can go into their account and see / manage connections.\n\nWhen you add an API and choose the root to trust or block, it won’t automatically filter down to any sub org you individually configured and disinherit it from the root.\n\nDirections in this Collab post"
-  },
-  {
     "objectID": "index.html#resources",
     "href": "index.html#resources",
     "title": "API Controls",
     "section": "Resources",
-    "text": "Resources\n\nCDW Amplified Help Article: Manage access to unconfigured third-party apps\nGoogle Support Page: Manage access to unconfigured third-party apps for users designated as under 18\nGoogle Support Page: Control which third-party & internal apps access Google Workspace data\nOfficial Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests\n\n\nCollaborative Member Resources\n\nSeptember 14th Deep Dive\n\nCollaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes\nSlide Deck | Timestamps & Summary | Recording\nQ & A from the live stream"
+    "text": "Resources\nPublic Resources\n\nCDW Amplified Help Article: Manage access to unconfigured third-party apps\nGoogle Support Page: Manage access to unconfigured third-party apps for users designated as under 18\nGoogle Support Page: Control which third-party & internal apps access Google Workspace data\nOfficial Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests\n\n\nCollaborative Member Resources\nSeptember 14th Deep Dive\n\nCollaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes\nSlide Deck | Timestamps & Summary | Recording\nQ & A from the live stream"
   },
   {
-    "objectID": "index.html#visual-roadmap",
-    "href": "index.html#visual-roadmap",
+    "objectID": "faq.html",
+    "href": "faq.html",
     "title": "API Controls",
-    "section": "Visual Roadmap",
-    "text": "Visual Roadmap\n[]{fig-alt=” map of key milestones”}"
+    "section": "",
+    "text": "Is there a maximum of configured apps?\n\nYes, 15,000. We are in talks with Google about this\n\nCan I unconfigure an app?\n\nIt does not appear like you can truly “unconfigure” an app. We are talking to Google about this.\n\nI’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs\n\nThis is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.\n\nCan we disable the ability for students to “Request apps”?\n\nNo. But it is something we will talk about internally to see if there is a work around.\nWe asked Google and it’s “in the works”.\n\nCan staff request apps like students?\n\nNo. Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)\n\nWhere does that “request” go (when students request access to an app)?\n\nAdmin Console Dashboard &gt; App access control card\nSecurity &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.\n\nCan we see “who” requested the app? Can we get alerted?\n\nUnder Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.\nYes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.\n\nCan you explain the API Block-Exempt option when trusting an app?\n\nThis is for people with Standard or Plus and use Context Aware Access.\nSelected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image\n\nQ & As from the after party\n\nSlide 1, Slide 2, Slide 3"
+  },
+  {
+    "objectID": "faq.html#faq",
+    "href": "faq.html#faq",
+    "title": "API Controls",
+    "section": "",
+    "text": "Is there a maximum of configured apps?\n\nYes, 15,000. We are in talks with Google about this\n\nCan I unconfigure an app?\n\nIt does not appear like you can truly “unconfigure” an app. We are talking to Google about this.\n\nI’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs\n\nThis is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.\n\nCan we disable the ability for students to “Request apps”?\n\nNo. But it is something we will talk about internally to see if there is a work around.\nWe asked Google and it’s “in the works”.\n\nCan staff request apps like students?\n\nNo. Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)\n\nWhere does that “request” go (when students request access to an app)?\n\nAdmin Console Dashboard &gt; App access control card\nSecurity &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.\n\nCan we see “who” requested the app? Can we get alerted?\n\nUnder Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.\nYes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.\n\nCan you explain the API Block-Exempt option when trusting an app?\n\nThis is for people with Standard or Plus and use Context Aware Access.\nSelected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image\n\nQ & As from the after party\n\nSlide 1, Slide 2, Slide 3"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "API Controls",
+    "section": "",
+    "text": "Public Resources\n\nCDW Amplified Help Article: Manage access to unconfigured third-party apps\nGoogle Support Page: Manage access to unconfigured third-party apps for users designated as under 18\nGoogle Support Page: Control which third-party & internal apps access Google Workspace data\nOfficial Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests\n\n\n\nSeptember 14th Deep Dive\n\nCollaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes\nSlide Deck | Timestamps & Summary | Recording\nQ & A from the live stream"
+  },
+  {
+    "objectID": "resources.html#resources",
+    "href": "resources.html#resources",
+    "title": "API Controls",
+    "section": "",
+    "text": "Public Resources\n\nCDW Amplified Help Article: Manage access to unconfigured third-party apps\nGoogle Support Page: Manage access to unconfigured third-party apps for users designated as under 18\nGoogle Support Page: Control which third-party & internal apps access Google Workspace data\nOfficial Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests\n\n\n\nSeptember 14th Deep Dive\n\nCollaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes\nSlide Deck | Timestamps & Summary | Recording\nQ & A from the live stream"
   }
 ]

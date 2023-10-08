@@ -1,0 +1,34 @@
+---
+title: "API Controls"
+---
+
+<div class="reveal resize-content">
+
+## FAQ
+
+* Is there a maximum of configured apps?
+  * Yes, 15,000. We are in talks with Google about this
+* Can I unconfigure an app?
+  * It does not appear like you can truly “unconfigure” an app. We are talking to Google about this.
+* I’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs
+  * This is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com. 
+* Can we disable the ability for students to “Request apps”?
+  * No. But it is something we will talk about internally to see if there is a work around.
+  * We asked Google and it’s “in the works”.
+* Can staff request apps like students?
+  * No. Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)
+* Where does that "request" go (when students request access to an app)?
+  * Admin Console Dashboard > App access control card
+  * Security > API Controls > App Access Control > Manage Third-Party App Access. Then it's the middle box across the top that says “Apps pending review”.
+* Can we see "who" requested the app? Can we get alerted?
+  * Under Reporting > Audit and investigation > OAuth log events. Then add the condition “Event is Request”.
+  * Yes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.
+* Can you explain the API Block-Exempt option when trusting an app?
+  * This is for people with Standard or Plus and use Context Aware Access. 
+  * Selected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases.
+image
+
+* Q & As from the after party
+  * Slide 1, Slide 2, Slide 3
+
+</div>

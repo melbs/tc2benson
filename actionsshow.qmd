@@ -6,33 +6,39 @@ format:
     chalkboard: 
       buttons: false
     preview-links: auto
+    css: reveal-styles.css
 ---
 
-# In the morning
+# Summary
 
-## Getting up
+{{< include summary.qmd >}}
 
-- Turn off alarm
-- Get out of bed
+
+# Understanding
+
+{{< include understanding.qmd >}}
+
+
+# API Controls
+
+{{< include apicontrols.qmd >}}
+
+
+# 2 required actions
+
+{{< include 2actions.qmd >}}
+
+
+# FAQ
+
+{{< include faq.qmd >}}
+
+
+# Resources
+
+{{< include resources.qmd >}}
 
 ---
-
-## Breakfast
-
-- Eat eggs
-- Drink coffee
-
-# In the evening
-
-## Dinner
-
-- Eat spaghetti
-- Drink wine
-
-## Going to sleep
-
-- Get in bed
-- Count sheep
 
 ## Exit
 

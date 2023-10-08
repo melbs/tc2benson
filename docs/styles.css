@@ -1,1 +1,8 @@
 /* css styles */
+
+
+.gray-box {
+  border: 0px solid gray;
+  padding: 10px;
+  background-color: #f2f2f2;
+}

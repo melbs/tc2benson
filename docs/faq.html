@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TC#2 - Outputs</title>
+<title>TC#2 - API Controls</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">TC#2</span>
     </a>
   </div>
@@ -84,20 +84,16 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../outputs.html" rel="" target="">
- <span class="menu-text">Outputs</span></a>
+    <a class="nav-link" href="./together.html" rel="" target="">
+ <span class="menu-text">All together now</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../actions.html" rel="" target="">
- <span class="menu-text">Actions Required</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../actionsshow.html" rel="" target="">
- <span class="menu-text">Actions Required Slide Show</span></a>
+    <a class="nav-link" href="./actionsshow.html" rel="" target="">
+ <span class="menu-text">Slide Show</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -116,20 +112,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#audit" id="toc-audit" class="nav-link active" data-scroll-target="#audit">Audit</a>
-  <ul class="collapse">
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
-  </ul></li>
+  <li><a href="#faq" id="toc-faq" class="nav-link active" data-scroll-target="#faq">FAQ</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="audit.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="audit.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="audit.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="faq.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="faq.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="faq.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Outputs</h1>
+<h1 class="title">API Controls</h1>
 </div>
 
 
@@ -144,22 +136,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="audit" class="level2">
-<h2 class="anchored" data-anchor-id="audit">Audit</h2>
-<section id="audience" class="level3">
-<h3 class="anchored" data-anchor-id="audience">Audience</h3>
+<section id="faq" class="level2 reveal resize-content">
+<h2 class="anchored" data-anchor-id="faq">FAQ</h2>
 <ul>
-<li>Consultants</li>
-<li>Audit team</li>
+<li>Is there a maximum of configured apps?
+<ul>
+<li>Yes, 15,000. We are in talks with Google about this</li>
+</ul></li>
+<li>Can I unconfigure an app?
+<ul>
+<li>It does not appear like you can truly “unconfigure” an app. We are talking to Google about this.</li>
+</ul></li>
+<li>I’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs
+<ul>
+<li>This is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.</li>
+</ul></li>
+<li>Can we disable the ability for students to “Request apps”?
+<ul>
+<li>No.&nbsp;But it is something we will talk about internally to see if there is a work around.</li>
+<li>We asked Google and it’s “in the works”.</li>
+</ul></li>
+<li>Can staff request apps like students?
+<ul>
+<li>No.&nbsp;Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)</li>
+</ul></li>
+<li>Where does that “request” go (when students request access to an app)?
+<ul>
+<li>Admin Console Dashboard &gt; App access control card</li>
+<li>Security &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.</li>
+</ul></li>
+<li>Can we see “who” requested the app? Can we get alerted?
+<ul>
+<li>Under Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.</li>
+<li>Yes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.</li>
+</ul></li>
+<li>Can you explain the API Block-Exempt option when trusting an app?
+<ul>
+<li>This is for people with Standard or Plus and use Context Aware Access.</li>
+<li>Selected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image</li>
+</ul></li>
+<li>Q &amp; As from the after party
+<ul>
+<li>Slide 1, Slide 2, Slide 3</li>
+</ul></li>
 </ul>
 </section>
-<section id="format" class="level3">
-<h3 class="anchored" data-anchor-id="format">Format</h3>
-<p>Google Doc PDF</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

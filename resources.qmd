@@ -1,0 +1,36 @@
+---
+title: "API Controls"
+---
+
+<div class="reveal resize-content">
+
+## Resources
+
+**Public Resources**
+
+* CDW Amplified Help Article: Manage access to unconfigured third-party apps 
+* Google Support Page: Manage access to unconfigured third-party apps for users designated as under 18 
+* Google Support Page: Control which third-party & internal apps access Google Workspace data
+* Official Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests 
+
+### Collaborative Member Resources
+
+**September 14th Deep Dive**
+
+* Collaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes
+* Slide Deck | Timestamps & Summary | Recording
+* Q & A from the live stream
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

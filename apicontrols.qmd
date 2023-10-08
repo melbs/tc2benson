@@ -1,0 +1,28 @@
+---
+title: "API Controls"
+---
+
+<div class="reveal resize-content">
+
+## API Controls
+
+### Overview
+
+When users sign in to third-party apps using the "Sign in with Google" option (single sign-on), you can control how those third-party apps access your organization’s Google data.
+
+**API Controls Section:**
+
+  `Security > Access and data controls > API Controls`
+
+**Manage Third Party Apps:**
+
+`Security > Access and data controls > API Controls > Manage Third-Party Apps`
+
+
+### Best Practices
+
+**Students:** (Default) Don't allow users to access any third-party apps
+
+**Staff:** This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process.
+
+</div>

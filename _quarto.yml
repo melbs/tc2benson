@@ -8,12 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: outputs.qmd
-        text: Outputs
-      - href: actions.qmd
-        text: Actions Required
+      - href: together.qmd
+        text: All together now
       - href: actionsshow.qmd
-        text: Actions Required Slide Show
+        text: Slide Show
 
 format:
   html:
@@ -26,6 +24,4 @@ format:
     documentclass: report
   docx: default
   pptx: default
-
-
 

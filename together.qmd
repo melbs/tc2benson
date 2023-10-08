@@ -1,0 +1,19 @@
+---
+title: "Together"
+---
+
+## All together now
+
+### This page includes the includes
+
+{{< include summary.qmd >}}
+
+{{< include understanding.qmd >}}
+
+{{< include apicontrols.qmd >}}
+
+{{< include 2actions.qmd >}}
+
+{{< include faq.qmd >}}
+
+{{< include resources.qmd >}}

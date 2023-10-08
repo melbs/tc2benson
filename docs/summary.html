@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -112,31 +112,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
-  <ul class="collapse">
-  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">TL;DR</a></li>
-  </ul></li>
-  <li><a href="#understanding-the-updates" id="toc-understanding-the-updates" class="nav-link" data-scroll-target="#understanding-the-updates">Understanding the Updates</a>
-  <ul class="collapse">
-  <li><a href="#immediate-impact" id="toc-immediate-impact" class="nav-link" data-scroll-target="#immediate-impact">Immediate Impact</a></li>
-  </ul></li>
-  <li><a href="#api-controls" id="toc-api-controls" class="nav-link" data-scroll-target="#api-controls">API Controls</a>
-  <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
-  </ul></li>
-  <li><a href="#required-actions" id="toc-required-actions" class="nav-link" data-scroll-target="#required-actions">Required Actions</a>
-  <ul class="collapse">
-  <li><a href="#configure" id="toc-configure" class="nav-link" data-scroll-target="#configure">Configure</a></li>
-  <li><a href="#confirm" id="toc-confirm" class="nav-link" data-scroll-target="#confirm">Confirm</a></li>
-  </ul></li>
-  <li><a href="#faq" id="toc-faq" class="nav-link" data-scroll-target="#faq">FAQ</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
-  <ul class="collapse">
-  <li><a href="#collaborative-member-resources" id="toc-collaborative-member-resources" class="nav-link" data-scroll-target="#collaborative-member-resources">Collaborative Member Resources</a></li>
-  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="index.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="summary.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="summary.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="summary.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -160,6 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div class="reveal resize-content">
 <p>Hey there, Google Admins! We’re on the cusp of significant shifts in <strong>Google’s API control settings for users under 18</strong>, set to shake things up this coming October. This is a noteworthy moment, especially for schools that haven’t yet fine-tuned their API Control settings. And for those who think they’re one step ahead, hold on! A slew of fresh updates and changes have already landed in the admin console, causing ripples of impact.</p>
 <p>With the flurry of updates to the API Controls section in the admin console over the past couple of years, it’s time to take a breather and review the API controls, nail down best practices, identify necessary actions, and map out the route to get there.</p>
 <section id="tldr" class="level3">
@@ -167,208 +146,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Google is pushing us towards a Trusted List approach for OAuth Apps, which will be implemented in October. Google Admins need to set up the trusted list and confirm settings before then.</p>
 <p><span data-fig-alt="Getting started banner screenshot"><img src="images/api-gettingstarted.png" class="img-fluid"></span></p>
 </section>
-</section>
-<section id="understanding-the-updates" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-the-updates">Understanding the Updates</h2>
-<p>Google notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct.&nbsp;23rd, 2023.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Takeaway">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Takeaway
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Google is making domains go to an OAuth App “Trusted List” for under 18 before Oct.&nbsp;23rd, 2023 or students will lose access to OAuth apps. Read the <a href="https://collab.amplifiedit.com/topic/2881-%F0%9F%9A%A8-primary-admin-email-action-required-access-to-third-party-applications-is-changing-for-users-designated-as-under-18-%F0%9F%9A%A8-61923">full email</a></p>
-</div>
-</div>
-<section id="immediate-impact" class="level3">
-<h3 class="anchored" data-anchor-id="immediate-impact">Immediate Impact</h3>
-<p>Previously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is why you are seeing a lot more “configured apps”</p>
-</div>
-</div>
-<p>Any “new” app can not be accessed by under 18 and the user can “Request” the app.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is why you’re seeing requests (from students)</p>
-</div>
-</div>
-<p><span data-fig-alt="google's email"><img src="images/stopthe.png" class="img-fluid"></span></p>
-<blockquote class="blockquote">
-<p>“It’s like Google did the “Stop the bleed” approach for students for you.”</p>
-<p><em>- Melissa Benson</em></p>
-</blockquote>
-</section>
-</section>
-<section id="api-controls" class="level2">
-<h2 class="anchored" data-anchor-id="api-controls">API Controls</h2>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<p>When users sign in to third-party apps using the “Sign in with Google” option (single sign-on), you can control how those third-party apps access your organization’s Google data.</p>
-<p><strong>API Controls Section:</strong></p>
-<p><code>Security &gt; Access and data controls &gt; API Controls</code></p>
-<p><strong>Manage Third Party Apps:</strong></p>
-<p><code>Security &gt; Access and data controls &gt; API Controls &gt; Manage Third-Party Apps</code></p>
-</section>
-<section id="best-practices" class="level3">
-<h3 class="anchored" data-anchor-id="best-practices">Best Practices</h3>
-<p><strong>Students:</strong> (Default) Don’t allow users to access any third-party apps</p>
-<p><strong>Staff:</strong> This needs to be discussed by the school. Be consistent with your other app policies. It’s best to lean towards a more controlled app approval process.</p>
-</section>
-</section>
-<section id="required-actions" class="level2">
-<h2 class="anchored" data-anchor-id="required-actions">Required Actions</h2>
-<p><strong>The process boils down to two actions: <code>Configure</code> and <code>Confirm</code>.</strong></p>
-<p><span data-fig-alt="two blocks saying configure and confirm"><img src="images/2actions.png" class="img-fluid"></span></p>
-<section id="configure" class="level3">
-<h3 class="anchored" data-anchor-id="configure">Configure</h3>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Configure a trusted list of OAuth apps: This is a significant task as most schools see hundreds and thousands of accessed apps.</p>
-</div>
-</div>
-<ol type="1">
-<li>Go through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)</li>
-<li>Figure out how to handle the incoming app requests.</li>
-<li>Look at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)</li>
-</ol>
-<p><strong>Ways to “approve” apps</strong></p>
-<ol type="1">
-<li>You can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]</li>
-<li>You could “add an app” and trust.</li>
-<li>Recommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]</li>
-</ol>
-<p><span data-fig-alt="workflow of approving apps"><img src="images/approve.png" class="img-fluid"></span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Watch the September Deep Dive for tips</p>
-</div>
-</div>
-</section>
-<section id="confirm" class="level3">
-<h3 class="anchored" data-anchor-id="confirm">Confirm</h3>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Confirm setting before October 23rd</strong></p>
-</div>
-</div>
-<ul>
-<li>This is the <a href="https://admin.google.com/u/0/ac/owl/reviewapps/intro?hl=en">Guided Stepper</a></li>
-<li>Think of this as you signing off with “parental/guardian consent”</li>
-<li><a href="https://www.youtube.com/watch?v=jAlmZ_lwr_Q&amp;t=2s">YouTube video</a> of this process.</li>
-</ul>
-</section>
-</section>
-<section id="faq" class="level2">
-<h2 class="anchored" data-anchor-id="faq">FAQ</h2>
-<ul>
-<li>Is there a maximum of configured apps?
-<ul>
-<li>Yes, 15,000. We are in talks with Google about this</li>
-</ul></li>
-<li>Can I unconfigure an app?
-<ul>
-<li>It does not appear like you can truly “unconfigure” an app. We are talking to Google about this.</li>
-</ul></li>
-<li>I’m having issues with the iPhone native mail and calendar apps when I’m blocking APIs
-<ul>
-<li>This is the full App ID for iOS in my console: 450232826690-0rm6bs9d2fps9tifvk2oodh3tasd7vl7.apps.googleusercontent.com.</li>
-</ul></li>
-<li>Can we disable the ability for students to “Request apps”?
-<ul>
-<li>No.&nbsp;But it is something we will talk about internally to see if there is a work around.</li>
-<li>We asked Google and it’s “in the works”.</li>
-</ul></li>
-<li>Can staff request apps like students?
-<ul>
-<li>No.&nbsp;Only under 18 can request. We are asking Google. Most likely a temp thing. (hopefully)</li>
-</ul></li>
-<li>Where does that “request” go (when students request access to an app)?
-<ul>
-<li>Admin Console Dashboard &gt; App access control card</li>
-<li>Security &gt; API Controls &gt; App Access Control &gt; Manage Third-Party App Access. Then it’s the middle box across the top that says “Apps pending review”.</li>
-</ul></li>
-<li>Can we see “who” requested the app? Can we get alerted?
-<ul>
-<li>Under Reporting &gt; Audit and investigation &gt; OAuth log events. Then add the condition “Event is Request”.</li>
-<li>Yes, by creating a Custom Rule: With the previous navigation then click on “Create activity rule” or “Reporting Rule” (depending on your edition). It will walk you through creating a rule (alert) where you can have it get sent to the Alert Center and email people.</li>
-</ul></li>
-<li>Can you explain the API Block-Exempt option when trusting an app?
-<ul>
-<li>This is for people with Standard or Plus and use Context Aware Access.</li>
-<li>Selected apps maintain API access to Google Workspace services even when those services have Context-Aware Access policies that apply to API access. Resources: When adding an app, Assign Context-Aware access levels to apps, Use Cases. image</li>
-</ul></li>
-<li>Q &amp; As from the after party
-<ul>
-<li>Slide 1, Slide 2, Slide 3</li>
-</ul></li>
-</ul>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p><strong>Public Resources</strong></p>
-<ul>
-<li>CDW Amplified Help Article: Manage access to unconfigured third-party apps</li>
-<li>Google Support Page: Manage access to unconfigured third-party apps for users designated as under 18</li>
-<li>Google Support Page: Control which third-party &amp; internal apps access Google Workspace data</li>
-<li>Official Google YouTube Video: Google Workspace for Education Admin Console: How to review third party app access requests</li>
-</ul>
-<section id="collaborative-member-resources" class="level3">
-<h3 class="anchored" data-anchor-id="collaborative-member-resources">Collaborative Member Resources</h3>
-<p><strong>September 14th Deep Dive</strong></p>
-<ul>
-<li>Collaborative Deep Dive - Back to School: Unpacking the Upcoming API Control Changes</li>
-<li>Slide Deck | Timestamps &amp; Summary | Recording</li>
-<li>Q &amp; A from the live stream</li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

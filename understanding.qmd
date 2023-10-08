@@ -1,0 +1,37 @@
+---
+title: "API Controls"
+---
+<div class="reveal resize-content">
+
+## Understanding the Updates
+
+Google notified primary admins on June 19th, 2023, announcing new API Controls, changes in behavior for users under 18 regarding their access to third-party apps, and a requirement to review and confirm access settings to third-party apps by Oct. 23rd, 2023.
+
+:::{.callout-note title="Takeaway" icon=false}
+Google is making domains go to an OAuth App “Trusted List” for under 18 before Oct. 23rd, 2023 or students will lose access to OAuth apps. Read the [full email](https://collab.amplifiedit.com/topic/2881-%F0%9F%9A%A8-primary-admin-email-action-required-access-to-third-party-applications-is-changing-for-users-designated-as-under-18-%F0%9F%9A%A8-61923)
+:::
+
+[comment]: <> (this is my comment)
+
+
+### Immediate Impact
+
+Previously accessed apps should not be affected until October 23rd. Google has “configured” previously accessed apps from under 18 as limited.
+
+:::{.callout-note}
+This is why you are seeing a lot more “configured apps”
+:::
+
+Any “new” app can not be accessed by under 18 and the user can “Request” the app.
+
+:::{.callout-note}
+This is why you’re seeing requests (from students)
+:::
+
+[![](images/stopthe.png)]{fig-alt="google's email"}
+
+> "It’s like Google did the “Stop the bleed” approach for students for you."
+>
+> *- Melissa Benson*
+
+</div>
