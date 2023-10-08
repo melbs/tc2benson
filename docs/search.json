@@ -7,18 +7,11 @@
     "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\nThis is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\n\n\n\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\nCheck out the September 14th Deep Dive on this\n\nSlide deck - slides\nRecording\n\n\n\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   },
   {
-    "objectID": "actions.html#actions-required",
-    "href": "actions.html#actions-required",
+    "objectID": "actions.html#next-steps-2-required-action-before-oct-23rd",
+    "href": "actions.html#next-steps-2-required-action-before-oct-23rd",
     "title": "Actions Required",
     "section": "",
-    "text": "2 things"
-  },
-  {
-    "objectID": "actions.html#configure-and-confirm",
-    "href": "actions.html#configure-and-confirm",
-    "title": "Actions Required",
-    "section": "Configure and Confirm",
-    "text": "Configure and Confirm"
+    "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\nThis is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\n\n\n\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\nCheck out the September 14th Deep Dive on this\n\nSlide deck - slides\nRecording\n\n\n\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   },
   {
     "objectID": "source_topics/Academy.html",
@@ -75,6 +68,41 @@
     "title": "Outputs",
     "section": "Academy",
     "text": "Academy\n\nAudience\n\nTechnical PD\n\n\n\nFormat\nGoogle Doc Google Slides"
+  },
+  {
+    "objectID": "actionsshow.html#getting-up",
+    "href": "actionsshow.html#getting-up",
+    "title": "Actions Required",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "actionsshow.html#breakfast",
+    "href": "actionsshow.html#breakfast",
+    "title": "Actions Required",
+    "section": "Breakfast",
+    "text": "Breakfast\n\nEat eggs\nDrink coffee"
+  },
+  {
+    "objectID": "actionsshow.html#dinner",
+    "href": "actionsshow.html#dinner",
+    "title": "Actions Required",
+    "section": "Dinner",
+    "text": "Dinner\n\nEat spaghetti\nDrink wine"
+  },
+  {
+    "objectID": "actionsshow.html#going-to-sleep",
+    "href": "actionsshow.html#going-to-sleep",
+    "title": "Actions Required",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+  },
+  {
+    "objectID": "actionsshow.html#exit",
+    "href": "actionsshow.html#exit",
+    "title": "Actions Required",
+    "section": "Exit",
+    "text": "Exit\nReturn back to the main page"
   },
   {
     "objectID": "source_topics/audit.html",
@@ -159,12 +187,5 @@
     "title": "API Controls",
     "section": "Visual Roadmap",
     "text": "Visual Roadmap\n[]{fig-alt=” map of key milestones”}"
-  },
-  {
-    "objectID": "actions.html#next-steps-2-required-action-before-oct-23rd",
-    "href": "actions.html#next-steps-2-required-action-before-oct-23rd",
-    "title": "Actions Required",
-    "section": "",
-    "text": "The process boils down to two actions: Configure and Confirm.\n\n\n\nThis is a significant task as most schools see hundreds and thousands of accessed apps. Here are the steps:\n\n\n\nGo through the configured apps (marked as “limited”) and trust or block them. (remember, Google “configured” previously accessed apps for under 18 as limited)\nFigure out how to handle the incoming app requests.\nLook at all of the rest of the accessed apps and create our trusted list for the rest of our users. (this would be addressing the trusted list for over 18)\n\n\n\n\n\nYou can trust one by one, or a couple by couple by going into your configured or accessed app list from within the admin console. [image below]\nYou could “add an app” and trust.\nRecommended: You can download the accessed apps list, bulk change access in a sheet, then bulk upload. [image below]\n\n\n\n\n\n\n\nCheck out the September 14th Deep Dive on this\n\nSlide deck - slides\nRecording\n\n\n\n\n\n\nThis is the Guided Stepper\nThink of this as you signing off with “parental/guardian consent”\nYouTube video of this process."
   }
 ]

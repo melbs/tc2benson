@@ -12,6 +12,8 @@ website:
         text: Outputs
       - href: actions.qmd
         text: Actions Required
+      - href: actionsshow.qmd
+        text: Actions Required Slide Show
 
 format:
   html:
@@ -24,7 +26,6 @@ format:
     documentclass: report
   docx: default
   pptx: default
-    
 
 
 
